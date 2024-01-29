@@ -1,21 +1,12 @@
 
-const enterName = document.getElementById('name-input');
-console.log(enterName);
+const nameInput = document.getElementById('name-input');
+const nameOutput = document.getElementById('name-output');
 
-const resultName = document.getElementById('name-output');
-console.log(resultName);
-
-
-enterName.addEventListener('input', resultGreetings);
-
-
-function resultGreetings() {
-    const trimmedName = enterName.value.trim();
-    const outputName = trimmedName === '' ? 'Anonymus' : trimmedName;
-
-    resultName.textContent = outputName;
-}
-
+nameInput.addEventListener('input', (newNameOutput) => {
+    nameOutput.textContent = newNameOutput.currentTarget.value;
+    const trimmedValue = nameInput.value.trim();
+  nameOutput.textContent = trimmedValue === '' ? 'Anonymous' : trimmedValue;
+});
 
 
 
