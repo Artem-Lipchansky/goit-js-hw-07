@@ -30,7 +30,7 @@ const list = document.querySelector('.gallery');
 const fragment = document.createDocumentFragment();
 
 images.forEach(img => {
-  // img.setAttribute('width', '100');
+  
 
   const item = document.createElement('li');
 
